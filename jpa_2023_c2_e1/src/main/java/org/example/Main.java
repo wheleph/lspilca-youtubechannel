@@ -22,14 +22,8 @@ public class Main {
         try {
             em.getTransaction().begin();
 
-//            Employee e1 = em.find(Employee.class, 1);
-//            e1.setName("Mary");
-
-            Employee e1 = new Employee();
-            e1.setId(1);
-            e1.setName("Alice");
-            e1.setAddress("Something");
-            em.merge(e1);
+            Employee e1 = em.find(Employee.class, 1);
+            e1.setName("Laur Spilca");
 
 //            em.persist();   -> Adding an entity in the context
 //            em.find()       -> Finds by PK. Get from DB and add it to the context if it doesn't already exist

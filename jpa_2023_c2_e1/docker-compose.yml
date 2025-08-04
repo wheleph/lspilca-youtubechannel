@@ -1,0 +1,15 @@
+services:
+  db:
+    image: mysql:9.3.0
+    ports:
+      - 13306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: ""
+      MYSQL_DATABASE: jpa_2023_c2_e1
+      MYSQL_ALLOW_EMPTY_PASSWORD: true
+    healthcheck:
+      # “mysqladmin ping” will return 0 only once MySQL is up and accepting connections
+      test: [ "CMD", "mysqladmin", "ping", "--silent" ]
+      interval: 5s
+      timeout: 5s
+      retries: 20

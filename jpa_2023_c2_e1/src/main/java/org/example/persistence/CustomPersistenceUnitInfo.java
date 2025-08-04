@@ -39,7 +39,7 @@ public class CustomPersistenceUnitInfo implements PersistenceUnitInfo {
     public DataSource getJtaDataSource() {
         HikariDataSource dataSource = new HikariDataSource();
 
-        dataSource.setJdbcUrl("jdbc:mysql://localhost/demo");
+        dataSource.setJdbcUrl("jdbc:mysql://localhost:13306/jpa_2023_c2_e1");
         dataSource.setUsername("root");
         dataSource.setPassword("");
 
